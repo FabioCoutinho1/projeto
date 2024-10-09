@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(199, 199, 199);
+}
+/* Cabeçalho e barra de nav */
+header{
+    color: white;
+}
+
+nav h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+nav ul li a:hover{
+    background-color: red;
+    transition: .5s;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background-color: black;
+    display: none;
+    
+    
+}
+
+.dropdown-menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+main{
+    height: calc(100dvh - 60px);
+}
+
+/* Quartos */
+.rooms{
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    flex-basis: 150px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+.room-pre{
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    box-shadow: 2px 2px 4px 0px black;
+    transition: all .5s ease-out;
+}
+
+ .room{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column;
+
+    background-color: rgb(87, 255, 87);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    box-shadow: 2px 2px 4px 0px black;
+    transition: all .5s ease-out;
+}
+
+.room:hover{
+    transform: scale(105%);
+    
+}
+
+.room-empty{
+    background-color: gray;
+}
