@@ -7,6 +7,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(199, 199, 199);
+    
 }
 /* Cabeçalho e barra de nav */
 header{
@@ -47,8 +48,6 @@ nav ul li a:hover{
     position: absolute;
     background-color: black;
     display: none;
-    
-    
 }
 
 .dropdown-menu a{
@@ -62,18 +61,28 @@ nav ul li a:hover{
 
 main{
     height: calc(100dvh - 60px);
+    width: 100%;
 }
 
 /* Quartos */
 .rooms{
-    padding: 5px;
-    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    max-width: 80%;
+    
+    margin: auto;
+
     display: flex;
     flex-basis: 150px;
     flex-flow: row wrap;
-    justify-content: center;
     align-content: flex-start;
+    
     gap: 10px;
+}
+
+.rooms-none{
+    display: none;
 }
 
 .room-pre{
@@ -100,11 +109,18 @@ main{
     transition: all .5s ease-out;
 }
 
-.room:hover{
-    transform: scale(105%);
+.rooms:hover > :not(:hover){
+    transform: scale(0.9);
+    opacity: .9;
     
 }
 
 .room-empty{
     background-color: gray;
+}
+
+.cad-hos{
+    background-color: aqua;
+    width: 750px;
+    height: 500px;
 }
